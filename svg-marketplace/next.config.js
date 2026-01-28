@@ -13,6 +13,12 @@ const nextConfig = {
       },
     ],
   },
+  // Ensure proper output for Vercel
+  output: 'standalone',
+  // Disable static optimization to prevent 404s
+  experimental: {
+    appDir: true,
+  },
 }
 
 module.exports = nextConfig
